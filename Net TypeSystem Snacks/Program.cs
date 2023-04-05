@@ -160,63 +160,60 @@
 //}
 
 ////FUNZIONI
-////11. Dare la possibilità di inserire due parole.Verificare tramite una funzione che le due parole abbiano la stessa lunghezza.
-////Se hanno la stessa lunghezza, stamparle entrambe, altrimenti stampare la più lunga delle due.
 
 internal class Program
 {
-    //    private static void Main(string[] args)
-    //    {
-    //        Console.WriteLine("Inserisci 2 prole. Se avranno la stessa lunghezza, le stamperò entrambe, altrimenti la più lunga delle due");
-    //        string[] words = new string[2];
-    //        for (int i = 0; i < words.Length; i++)
-    //        {
-    //            Console.Write($"{i + 1}° parola: ");
-    //            words[i] = Console.ReadLine();
-    //        }
-    //        fetchWordMaxLength(words);
-
-
-    //    }
-    //    static void fetchWordMaxLength(string[] words)
-    //    { 
-    //      for (int i = 0; i < words.Length; i++)
-    //        {
-    //            if (i + 1! <= words.Length - 1)
-    //            {
-    //                if (words[i].Length > words[i + 1].Length)
-    //                {
-    //                    Console.WriteLine($"{words[i]}");
-    //                }
-
-    //                else if (words[i].Length == words[i + 1].Length)
-    //                {
-    //                    Console.WriteLine($"{words[i]}");
-    //                    Console.WriteLine($"{words[i + 1]}");
-    //                }else
-    //                {
-    //                    Console.WriteLine($"{words[i + 1]}");
-    //                }
-    //            }
-    //        }
-    //    }
-
-    //12. Scrivere una funzione per verificare se un numero è pari o dispari.Quindi chiedere un numero all'utente e comunicargli se è pari o dispari.
-
-
-
     private static void Main(string[] args)
     {
+
+        ////11. Dare la possibilità di inserire due parole.Verificare tramite una funzione che le due parole abbiano la stessa lunghezza.
+        ////Se hanno la stessa lunghezza, stamparle entrambe, altrimenti stampare la più lunga delle due.
+        Console.WriteLine("Inserisci 2 prole. Se avranno la stessa lunghezza, le stamperò entrambe, altrimenti la più lunga delle due");
+        string[] words = new string[2];
+        for (int i = 0; i < words.Length; i++)
+        {
+            Console.Write($"{i + 1}° parola: ");
+            words[i] = Console.ReadLine();
+        }
+        fetchWordMaxLength(words);
+
+
+      //    12. Scrivere una funzione per verificare se un numero è pari o dispari.Quindi chiedere un numero all'utente e comunicargli se è pari o dispari.
         Console.Write("Inserisci un numero: ");
         int num = Convert.ToInt16(Console.ReadLine());
 
         fetchEvenOrOddNumber(num);
 
-        static void fetchEvenOrOddNumber(int n)
+
+    }
+    static void fetchWordMaxLength(string[] words)
+    {
+        Console.Write("la parola più lunga è ");
+        for (int i = 0; i < words.Length; i++)
         {
-            if (n % 2 == 0) Console.WriteLine($"{n} è un numero pari!!");
-            else Console.WriteLine($"{n} è un numero dispari!!");
+            if (i + 1! <= words.Length - 1)
+            {
+                if (words[i].Length > words[i + 1].Length)
+                {
+                    Console.WriteLine($"{words[i]}");
+                }
+
+                else if (words[i].Length == words[i + 1].Length)
+                {
+                    Console.WriteLine($"{words[i]}");
+                    Console.WriteLine($"{words[i + 1]}");
+                }
+                else
+                {
+                    Console.WriteLine($"{words[i + 1]}");
+                }
+            }
         }
+    }
+    static void fetchEvenOrOddNumber(int n)
+    {
+        if (n % 2 == 0) Console.WriteLine($"{n} è un numero pari!!");
+        else Console.WriteLine($"{n} è un numero dispari!!");
     }
 }
 
